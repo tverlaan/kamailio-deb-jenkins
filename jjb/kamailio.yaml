@@ -172,6 +172,9 @@
             branches:
               - '{branch}'
             wipe-workspace: false
+      properties:
+        - priority-sorter:
+            priority: 3
       execution-strategy:
         sequential: true
       axes:
@@ -217,6 +220,9 @@
         <!-- Do NOT edit this job through the web, it is generated via jenkins-job-builder! -->
       logrotate:
         numToKeep: '{logrotate_keep}'
+      properties:
+        - priority-sorter:
+            priority: 4
       execution-strategy:
         sequential: true
       axes:
@@ -280,6 +286,9 @@
         <!-- Do NOT edit this job through the web, it is generated via jenkins-job-builder! -->
       logrotate:
         numToKeep: '{logrotate_keep}'
+      properties:
+        - priority-sorter:
+            priority: 2
       execution-strategy:
         sequential: true
       axes:
@@ -326,6 +335,9 @@
       disabled: false
       logrotate:
         numToKeep: '{logrotate_keep}'
+      properties:
+        - priority-sorter:
+            priority: 4
       execution-strategy:
         sequential: true
       axes:
