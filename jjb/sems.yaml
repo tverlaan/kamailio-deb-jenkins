@@ -86,7 +86,7 @@
     logrotate_keep: *logrotate_keep
     debian_dir: *debian_dir
     debian_auto_version: *debian_auto_version
-    tagbasedev: '1.6-dev'
+    tagbasedev: '1.7-dev'
     repos: *repos
     refspec: *refbranch
     branch: *branch
@@ -96,7 +96,25 @@
     architectures: *architectures
     jobs: *jobs_checkplus
     cppcheck: *cppcheck
-    basetag: '1.6-dev'
+    basetag: '1.7-dev'
+
+- project:
+    name: sems16-nightly
+    logrotate_keep: *logrotate_keep
+    debian_dir: *debian_dir
+    debian_auto_version: *debian_auto_version
+    tagbasedev: '1.6.1-dev'
+    repos: *repos
+    refspec: *refbranch
+    branch:
+      - '1.6'
+    browser: *browser
+    browser-url: *browserurl
+    distributions: !!python/tuple [jessie, wheezy, precise]
+    architectures: *architectures
+    jobs: *jobs_checkplus
+    cppcheck: *cppcheck
+    basetag: '1.6.1-dev'
 
 - project:
     name: sems15-nightly
@@ -122,7 +140,7 @@
     logrotate_keep: 5
     debian_dir: *debian_dir
     debian_auto_version: *debian_auto_version
-    tagbasedev: '1.6-dev'
+    tagbasedev: '1.7-dev'
     repos: "https://github.com/linuxmaniac/sems.git"
     refspec: *refbranch
     branch:
@@ -130,6 +148,22 @@
     browser: githubweb
     browser-url: 'https://github.com/linuxmaniac/sems'
     distributions: !!python/tuple [jessie, wheezy, precise, trusty]
+    architectures: *architectures
+    jobs: *jobs_simple
+
+- project:
+    name: vseva-sems16-nightly
+    logrotate_keep: 5
+    debian_dir: *debian_dir
+    debian_auto_version: *debian_auto_version
+    tagbasedev: '1.6.1-dev'
+    repos: "https://github.com/linuxmaniac/sems.git"
+    refspec: *refbranch
+    branch:
+      - 'vseva/deb_1.6'
+    browser: githubweb
+    browser-url: 'https://github.com/linuxmaniac/sems'
+    distributions: !!python/tuple [jessie, wheezy, precise]
     architectures: *architectures
     jobs: *jobs_simple
 
