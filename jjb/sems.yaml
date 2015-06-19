@@ -183,6 +183,7 @@
       logrotate:
         numToKeep: '{logrotate_keep}'
       disabled: false
+      node: master
       triggers:
         - pollscm: '@midnight'
       parameters:
@@ -230,6 +231,7 @@
         numToKeep: '{logrotate_keep}'
       execution-strategy:
         sequential: true
+      node: slave
       axes:
         - axis:
             type: user-defined

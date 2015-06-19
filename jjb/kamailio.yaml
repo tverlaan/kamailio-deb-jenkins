@@ -354,6 +354,7 @@
       logrotate:
         numToKeep: '{logrotate_keep}'
       disabled: false
+      node: master
       triggers:
         - pollscm: '@midnight'
       builders:
@@ -391,6 +392,7 @@
         numToKeep: '{logrotate_keep}'
       execution-strategy:
         sequential: true
+      node: slave
       axes:
         - axis:
             type: user-defined
@@ -547,7 +549,7 @@
         - workspace-cleanup:
             dirmatch: false
         - email:
-            recipients: "sr-dev@lists.sip-router.org, linuxmaniac@torreviejawireless.org"
+            recipients: "linuxmaniac@torreviejawireless.org"
       wrappers:
         - timestamps
         - timeout:
